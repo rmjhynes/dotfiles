@@ -82,7 +82,7 @@ if command -v tmux &>/dev/null; then
   echo "Reloading tmux configuration..."
   tmux source-file ~/.tmux.conf
   # Then manually refresh tmux after attaching to a session with:
-  # ctrl + b, shift + i
+  # prefix, shift + i
 else
   echo "tmux not installed; skipping tmux configuration reload."
 fi
