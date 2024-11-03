@@ -1,27 +1,29 @@
 #!/bin/zsh
 
+# Remove files in home directory so they cam be be replaced with symlinks
+rm -f ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf
+rm -rf ~/.config/nvim
+
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
 
 # Symlink .zshrc file
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sfv ~/dotfiles/.zshrc ~/.zshrc
 
 # Symlinklink .p10k.zsh
-ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+ln -sfv ~/dotfiles/.p10k.zsh ~/.p10k.zsh
 
 # Symlink .aliases
-ln -sf ~/dotfiles/.aliases ~/.aliases
+ln -sfv ~/dotfiles/.aliases ~/.aliases
 
 # Symlink .vimrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 
 # Symlink .tmux.conf
-ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-# Symlink files in nvim directory
-for file in ~/dotfiles/nvim/*; do
-  ln -sf "$file" ~/.config/nvim/$(basename "$file")
-done
+# Create symlinks for all files in nvim directory in script nvim_symlinks.sh
+zsh ./scripts/nvim_symlinks.sh
 
 echo "Symlinks created."
 

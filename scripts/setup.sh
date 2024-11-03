@@ -19,4 +19,5 @@ fi
 # Install LibreWolf without quarantine otherwise you get 'LibreWolf is damaged and can't be opened...' error.
 brew reinstall librewolf --cask --no-quarantine
 
-zsh ./install.sh
+# Install dotfiles with zsh in script install.sh
+zsh ./scripts/install.sh
