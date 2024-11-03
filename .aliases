@@ -5,6 +5,6 @@ alias tf='terraform'
 alias cl='clear'
 
 # Preview file in fzf with bat
-alias fzfb='fzf --preview="bat {}"'
+alias fzfb='fzf --preview="bat {} --style=numbers --color=always"'
 
 eval $(thefuck --alias fck)
