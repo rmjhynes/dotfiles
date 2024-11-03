@@ -83,9 +83,18 @@ fi
 # Source updates to TPM in tmux configuration file and reload
 if command -v tmux &>/dev/null; then
   echo "Reloading tmux configuration..."
+  # Start a detachched tmux session for config reload
+  tmux new-session -d -s temp
+  # Then can source the tmux config file
   tmux source-file ~/.tmux.conf
-  # Then manually refresh tmux after attaching to a session with:
+  # Note - manually refresh tmux after attaching to a session with:
   # prefix, shift + i
+
+  # Detach from tmux session to continue script
+  tmux detach -s temp
+
+  # Kill the temporary session to clean up
+  tmux kill-session -t temp
 else
   echo "tmux not installed; skipping tmux configuration reload."
 fi
