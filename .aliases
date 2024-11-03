@@ -1,4 +1,10 @@
 alias k='kubectl'
+
 alias tf='terraform'
+
 alias cl='clear'
+
+# Preview file in fzf with bat
+alias fzfb='fzf --preview="bat {}"'
+
 eval $(thefuck --alias fck)
