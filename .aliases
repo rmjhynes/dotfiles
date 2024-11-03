@@ -7,4 +7,7 @@ alias cl='clear'
 # Preview file in fzf with bat
 alias fzfb='fzf --preview="bat {} --style=numbers --color=always"'
 
+# Open file found using fzf in neovim
+alias fzfnv='nvim $(fzf --preview="bat {} --style=numbers --color=always")'
+
 eval $(thefuck --alias fck)
