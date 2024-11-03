@@ -14,6 +14,9 @@ else
   exit 1
 fi
 
+# Install LibreWolf without quarantine otherwise you get 'LibreWolf is damaged and can't be opened...' error.
+brew reinstall librewolf --cask --no-quarantine
+
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
 
