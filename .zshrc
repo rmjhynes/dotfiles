@@ -108,9 +108,6 @@ ZSH_HIGHLIGHT_STYLES[arg0]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#F8F8F2'
 ZSH_HIGHLIGHT_STYLES[cursor]='standout'
 
-# Configure vim key bindings
-bindkey -v
-
 # Avoid annoying backspace / delete issue
 bindkey -v '^?' backward-delete-char
 
