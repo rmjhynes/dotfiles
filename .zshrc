@@ -211,4 +211,4 @@ source $ZSH/oh-my-zsh.sh
 source <(fzf --zsh)
 
 # Source aliases from ~/.aliases
-source .aliases
+source ~/.aliases
