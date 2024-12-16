@@ -1,0 +1,2 @@
+# Ignore tmux client log files
+tmux-client-*
