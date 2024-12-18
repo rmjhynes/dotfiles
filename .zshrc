@@ -9,7 +9,14 @@ fi
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# This differs between MacOS and NixOS.
+if [ $(uname) = 'Darwin' ]; then
+  # If using MacOS
+  export ZSH="$HOME/.oh-my-zsh"
+else
+  # If using NixOS
+  export ZSH="$HOME/.local/state/nix/profiles/home-manager/home-path/share/oh-my-zsh/oh-my-zsh.sh"
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
