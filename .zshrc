@@ -15,7 +15,7 @@ if [ $(uname) = 'Darwin' ]; then
   export ZSH="$HOME/.oh-my-zsh"
 else
   # If using NixOS
-  export ZSH="$HOME/.local/state/nix/profiles/home-manager/home-path/share/oh-my-zsh/oh-my-zsh.sh"
+  export ZSH=".local/state/nix/profiles/home-manager/home-path/share/oh-my-zsh"
 fi
 
 # Set name of the theme to load --- if set to "random", it will
