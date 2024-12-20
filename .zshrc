@@ -8,6 +8,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+NIX_HOME_DIRECTORY="/home/rmjhynes"
+
 # Path to your Oh My Zsh installation.
 # This differs between MacOS and NixOS.
 if [ $(uname) = 'Darwin' ]; then
@@ -15,7 +17,7 @@ if [ $(uname) = 'Darwin' ]; then
   export ZSH="$HOME/.oh-my-zsh"
 else
   # If using NixOS
-  export ZSH=".local/state/nix/profiles/home-manager/home-path/share/oh-my-zsh"
+  export ZSH="$NIX_HOME_DIRECTORY/.oh-my-zsh"
 fi
 
 # Set name of the theme to load --- if set to "random", it will
@@ -212,7 +214,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [ $(uname) = 'Darwin' ]; then
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+else
+  [[ ! -f $NIX_HOME_DIRECTORY/.p10k.zsh ]] || source $NIX_HOME_DIRECTORY/.p10k.zsh
+fi
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -221,4 +227,8 @@ source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
 # Source aliases from ~/.aliases
-source ~/.aliases
+if [ $(uname) = 'Darwin' ]; then
+  source ~/.aliases
+else
+  source $NIX_HOME_DIRECTORY/.aliases
+fi
