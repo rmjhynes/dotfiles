@@ -13,6 +13,8 @@ if [[ -f $NIX_HOME_DIRECTORY/.zshrc.pre-oh-my-zsh ]]; then
   rm $NIX_HOME_DIRECTORY/.zshrc
   mv $NIX_HOME_DIRECTORY/.zshrc.pre-oh-my-zsh $NIX_HOME_DIRECTORY/.zshrc
 fi
+# Oh-my-zsh brings up a new shell here with the applied config, to continue the script, simply run 
+# "exit"
 
 # Install Powerlevel10k theme for ZSH if not already installed
 ZSH_CUSTOM=${ZSH_CUSTOM:-$NIX_HOME_DIRECTORY/.oh-my-zsh/custom}

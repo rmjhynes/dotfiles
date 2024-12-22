@@ -39,6 +39,8 @@ if [[ -f ~/.zshrc.pre-oh-my-zsh ]]; then
   rm ~/.zshrc
   mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc
 fi
+# Oh-my-zsh brings up a new shell here with the applied config, to continue the script, simply run 
+# "exit"
 
 # Install Powerlevel10k theme for ZSH if not already installed
 ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
