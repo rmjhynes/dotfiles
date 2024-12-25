@@ -34,6 +34,12 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
+-- Number of spaces for indentation
+vim.opt.shiftwidth = 2
+ -- Number of spaces for a tab
+vim.opt.tabstop = 2
+-- Number of spaces for a <Tab> in insert mode
+vim.opt.softtabstop = 2
 
 -- Save undo history
 vim.opt.undofile = true
