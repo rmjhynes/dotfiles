@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# Remove files in home directory so they cam be be replaced with symlinks
+# Remove files in home directory so they can be be replaced with symlinks
 rm -f ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf
 rm -rf ~/.config/nvim
 
