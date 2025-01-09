@@ -34,6 +34,8 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
+-- Use spaces instead of tabs
+vim.opt.expandtab = true
 -- Number of spaces for indentation
 vim.opt.shiftwidth = 2
  -- Number of spaces for a tab
