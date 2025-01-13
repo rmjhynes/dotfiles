@@ -104,11 +104,16 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
---  Use Alt + arrow keys to move between windows
-vim.keymap.set("n", "<A-Left>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<A-Right>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<A-Down>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<A-Up>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Split window keybinds
+-- Horizontal split
+vim.keymap.set('n', '<leader>sh', ':split<CR>', { desc = 'Horizontal Split' })
+-- Vertical split
+vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical Split' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
