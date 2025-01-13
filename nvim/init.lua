@@ -111,9 +111,9 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Split window keybinds
 -- Horizontal split
-vim.keymap.set('n', '<leader>sh', ':split<CR>', { desc = 'Horizontal Split' })
+vim.keymap.set('n', '<leader>-', ':split<CR>', { desc = 'Horizontal Split' })
 -- Vertical split
-vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { desc = 'Vertical Split' })
+vim.keymap.set('n', '<leader>/', ':vsplit<CR>', { desc = 'Vertical Split' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
