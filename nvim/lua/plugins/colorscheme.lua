@@ -1,6 +1,14 @@
 return {
   -- add dracula
-  { "Mofiqul/dracula.nvim" },
+  {
+    "Mofiqul/dracula.nvim",
+        config = function()
+      -- Configure dracula theme after it's loaded
+      require("dracula").setup({
+        transparent_bg = true
+      })
+    end
+  },
 
   -- Configure LazyVim to load dracula
   {
