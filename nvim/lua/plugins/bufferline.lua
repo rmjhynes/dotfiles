@@ -5,14 +5,15 @@ return {
       options = {
         sort_by = 'extension',
         indicator = {
-          style = 'underline'
+          style = 'icon' -- Display a '|' to indicate current tab (more obvious than using underline)
         },
         buffer_close_icon = '󰅖',
         offsets = {
           {
-            filetype = "Neotree",  -- Change this to the correct sidebar filetype
-            text = "File Explorer",  -- This should be a string, or a function that returns a string
-            text_align = "center",  -- This can be "left", "center", or "right"
+            filetype = "neo-tree",  -- I currently use neo-tree
+            text = "Neo-tree File Explorer",  -- Text that is displayed as the file explorer window heading
+            text_align = "center",  -- Alignment of the above text
+            highlight = "Directory",
             separator = true,  -- Adds a separator between the bufferline and the sidebar
           },
         },
@@ -23,5 +24,5 @@ return {
     }
   end,
   version = "*",
-  dependencies = {'nvim-tree/nvim-web-devicons'},  -- Corrected this to be in a table
+  dependencies = {'nvim-tree/nvim-web-devicons'},
 }
