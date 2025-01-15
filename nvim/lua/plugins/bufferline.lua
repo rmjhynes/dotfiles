@@ -16,6 +16,9 @@ return {
             separator = true,  -- Adds a separator between the bufferline and the sidebar
           },
         },
+        numbers = function(opts)
+          return string.format('%s', opts.ordinal) -- Prefix buffer name with its ordinal number
+        end,
       }
     }
   end,
