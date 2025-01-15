@@ -18,7 +18,7 @@ return {
           },
         },
         numbers = function(opts)
-          return string.format('%s', opts.ordinal) -- Prefix buffer name with its ordinal number
+          return string.format('%s', opts.id) -- Prefix buffer name with its id (used to switch between buffers)
         end,
       }
     }
