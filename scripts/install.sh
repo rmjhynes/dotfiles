@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Remove files in home directory so they can be be replaced with symlinks
-rm -rf ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/nvim
+rm -rf ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim
 
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
@@ -23,6 +23,9 @@ ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # Symlink ghostty config file
 ln -sfv ~/dotfiles/ghostty.conf ~/.config/ghostty/config
+
+# Symlink htoprc config file
+ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh ./scripts/nvim_symlinks.sh
