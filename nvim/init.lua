@@ -136,5 +136,5 @@ vim.opt.termguicolors = true
 -- I am not using LazyVim plugins so its fine to use this option
 vim.g.lazyvim_check_order = false
 
--- Read /config/lazy.lua file to initialise lazy.nvim
+-- Read /lua/config/lazy.lua file to initialise lazy.nvim
 require("config.lazy")
