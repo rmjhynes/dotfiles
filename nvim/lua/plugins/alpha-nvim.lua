@@ -37,8 +37,9 @@ return {
         local datetime = os.date(" %d-%m-%Y   %H:%M:%S")
         local version = vim.version()
         local nvim_version_info = "   v" .. version.major .. "." .. version.minor .. "." .. version.patch
+        local current_dir = vim.fn.getcwd()
 
-        return datetime .. "   " .. total_plugins .. " plugins" .. nvim_version_info
+        return datetime .. "   " .. "Current directory: " .. current_dir
     end
 
     dashboard.section.footer.val = footer()
