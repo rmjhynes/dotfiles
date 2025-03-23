@@ -115,6 +115,12 @@ vim.keymap.set('n', '<leader>-', ':split<CR>', { desc = 'Horizontal Split' })
 -- Vertical split
 vim.keymap.set('n', '<leader>/', ':vsplit<CR>', { desc = 'Vertical Split' })
 
+-- No neck pain keybind
+vim.keymap.set('n', '<leader>|', ':NoNeckPain<CR>', { desc = 'Toggle NoNeckPain' })
+
+-- Toggleterm Keybind
+vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>', { desc = 'Open Terminal' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
