@@ -1,4 +1,5 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
-  enable = true
+  enable = true,
+  mode = 'topline'
 }
