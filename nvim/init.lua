@@ -121,6 +121,9 @@ vim.keymap.set('n', '<leader>|', ':NoNeckPain<CR>', { desc = 'Toggle NoNeckPain'
 -- Toggleterm Keybind
 vim.keymap.set('n', '<leader>t', ':ToggleTerm<CR>', { desc = 'Open Terminal' })
 
+-- Set max character count for each line
+vim.opt.colorcolumn = "80"
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
