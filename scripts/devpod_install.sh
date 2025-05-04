@@ -4,7 +4,7 @@
 mkdir ~/.config/nixpkgs
 
 # Symlink config.nix file
-ln -sfv ~/.config/nixpkgs/config.nix ~/config.nix
+ln -sfv $PWD/config.nix ~/.config/nixpkgs/config.nix
 
 # Install packages declared in config.nix
 nix-env -iA nixpkgs.myPackages
