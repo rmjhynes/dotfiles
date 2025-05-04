@@ -1,5 +1,10 @@
 #!/bin/zsh
 
+# If running a Linux devpod, install packages using nixpkgs
+if [[ $(uname) == "Linux"]]; then
+  nix-env -iA nixpkgs.myPackages
+fi
+
 # Remove files in home directory so they can be be replaced with symlinks
 rm -rf ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml
 
