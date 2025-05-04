@@ -1,13 +1,5 @@
 #!/bin/zsh
 
-# If running a Linux devpod, install packages using nixpkgs
-if [[ $(uname) == "Linux"]]; then
-  # Symlink config.nix file
-  ln -sfv ~/.config/nixpkgs/config.nix ~/config.nix
-  # Install packages declared in config.nix
-  nix-env -iA nixpkgs.myPackages
-fi
-
 # Remove files in home directory so they can be be replaced with symlinks
 rm -rf ~/.zshrc ~/.p10k.zsh ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml
 
@@ -108,6 +100,15 @@ if command -v tmux &>/dev/null; then
 else
   echo "tmux not installed; skipping tmux configuration reload."
 fi
+
+# If running a Linux devpod, install packages using nixpkgs
+if [[ $(uname) == "Linux"]]; then
+  # Symlink config.nix file
+  ln -sfv ~/.config/nixpkgs/config.nix ~/config.nix
+  # Install packages declared in config.nix
+  nix-env -iA nixpkgs.myPackages
+fi
+
 
 # Apply zsh config
 source ~/.zshrc
