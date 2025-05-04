@@ -6,5 +6,6 @@ mkdir ~/.config/nixpkgs
 # Symlink config.nix file
 ln -sfv $PWD/config.nix ~/.config/nixpkgs/config.nix
 
-# Install packages declared in config.nix
-nix-env -iA nixpkgs.myPackages
+# Install packages declared in config.nix (temporarily allow unfree during
+# install)
+NIXPKGS_ALLOW_UNFREE=1 nix-env -iA nixpkgs.myPackages
