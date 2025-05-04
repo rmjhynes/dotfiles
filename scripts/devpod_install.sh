@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Create directories where nix packages file will live
-mkdir ~/.config && mkdir ~/.config/nixpkgs
+# Create directory where nix packages file will live
+mkdir ~/.config/nixpkgs
 
 # Symlink config.nix file
 ln -sfv ~/.config/nixpkgs/config.nix ~/config.nix
