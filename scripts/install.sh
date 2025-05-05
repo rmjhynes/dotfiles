@@ -21,14 +21,14 @@ ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 # Symlink .tmux.conf
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-# Symlink ghostty config file
-ln -sfv ~/dotfiles/ghostty.conf ~/.config/ghostty/config
+# Create directory if it doesn't exist, then symlink ghostty config file
+mkdir -p ~/.config/ghostty && ln -sfv ~/dotfiles/ghostty.conf ~/.config/ghostty/config
 
-# Symlink htoprc config file
-ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
+# Create directory if it doesn't exist, then symlink htoprc config file
+mkdir -p ~/.config/htop && ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
 
-# Symlink gh config file
-ln -sfv ~/dotfiles/gh-config.yml ~/.config/gh/config.yml
+# Create directory if it doesn't exist, then symlink gh config file
+mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/gh-config.yml ~/.config/gh/config.yml
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh ./scripts/nvim_symlinks.sh
