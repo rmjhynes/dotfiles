@@ -104,17 +104,4 @@ fi
 # Apply zsh config
 source ~/.zshrc
 
-# Install packages with nixpkgs if using devcontainer
-if [[$(uname) == "Linux"]]; then
-  # Create directory where nix packages file will live
-  mkdir ~/.config/nixpkgs
-
-  # Symlink config.nix file
-  ln -sfv $PWD/config.nix ~/.config/nixpkgs/config.nix
-
-  # Install packages declared in config.nix (temporarily allow unfree during
-  # install)
-  NIXPKGS_ALLOW_UNFREE=1 nix-env -iA nixpkgs.myPackages
-fi
-
 echo "Dotfiles installation and configuration complete."
