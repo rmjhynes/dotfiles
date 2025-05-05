@@ -105,7 +105,7 @@ fi
 source ~/.zshrc
 
 # Install packages with nixpkgs if using devcontainer
-if [[$(uname) == "Linux"]]; then
+if [[ $(uname) == "Linux" ]]; then
   # Create directory where nix packages file will live
   mkdir ~/.config/nixpkgs
 
