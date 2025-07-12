@@ -8,17 +8,22 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-NIX_HOME_DIRECTORY="/home/rmjhynes"
+###################################################
+# Required when I used to use NixOS - now redundant
+###################################################
+# NIX_HOME_DIRECTORY="/home/rmjhynes"
+#
+# # Path to your Oh My Zsh installation.
+# # This differs between MacOS and NixOS.
+# if [ $(uname) = 'Darwin' ]; then
+#   # If using MacOS
+#   export ZSH="$HOME/.oh-my-zsh"
+# else
+#   # If using NixOS
+#   export ZSH="$NIX_HOME_DIRECTORY/.oh-my-zsh"
+# fi
 
-# Path to your Oh My Zsh installation.
-# This differs between MacOS and NixOS.
-if [ $(uname) = 'Darwin' ]; then
-  # If using MacOS
-  export ZSH="$HOME/.oh-my-zsh"
-else
-  # If using NixOS
-  export ZSH="$NIX_HOME_DIRECTORY/.oh-my-zsh"
-fi
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
