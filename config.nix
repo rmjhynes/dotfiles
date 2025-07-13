@@ -1,5 +1,8 @@
 # https://nixos.org/manual/nixpkgs/stable/#sec-building-environment
 {
+  # Allow unfree packages - without this you will get an error
+  allowUnfree = true;
+
   packageOverrides =
     pkgs: with pkgs; {
       myPackages = pkgs.buildEnv {
