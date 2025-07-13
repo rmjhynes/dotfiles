@@ -44,7 +44,7 @@ elif [ -f /etc/os-release ]; then
     fi
   fi
 
-# If not macOS or Linux with a recognized OS
+# If not macOS or Linux with an expected OS
 else
   echo "Unsupported / unknown operating system." >&2
   exit 1
