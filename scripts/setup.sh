@@ -36,12 +36,8 @@ elif [ -f /etc/os-release ]; then
   elif [ "$OS_ID" = 'fedora' ]; then
     export ZSH="$HOME/.oh-my-zsh"
 
-    # Install Nix packages if nix-env is available
-    if command -v nix-env &>/dev/null; then
-      nix-env -iA nixpkgs.myPackages
-    else
-      echo "Nix package manager not found. Skipping nix-env installation." >&2
-    fi
+    # Install packages with Nix package manager
+    nix-env -iA nixpkgs.myPackages
   fi
 
 # If not macOS or Linux with an expected OS
