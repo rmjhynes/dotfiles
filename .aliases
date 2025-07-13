@@ -24,4 +24,4 @@ alias fzfnv='nvim $(fzf --preview="bat {} --style=numbers --color=always")'
 
 # May show error when installed via Nix packages as its no longer maintained
 # pay-respects package can be used instead
-eval $(thefuck --alias fck)
+# eval $(thefuck --alias fck)
