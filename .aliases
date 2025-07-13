@@ -1,13 +1,27 @@
+### Kubectl
 alias k='kubectl'
+alias kgp='kubectl get pod'
+alias kgs='kubectl get service'
+alias kpf='kubectl port-forward'
+alias kd='kubectl describe'
 
 alias tf='terraform'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
+alias tfaa='terraform apply --auto-approve'
 
-alias cl='clear'
+alias c='clear'
+alias h='history'
 
+alias lg='lazygit'
+
+### fzf
 # Preview file in fzf with bat
 alias fzfb='fzf --preview="bat {} --style=numbers --color=always"'
 
 # Open file found using fzf in neovim
 alias fzfnv='nvim $(fzf --preview="bat {} --style=numbers --color=always")'
 
+# May show error when installed via Nix packages as its no longer maintained
+# pay-respects package can be used instead
 eval $(thefuck --alias fck)
