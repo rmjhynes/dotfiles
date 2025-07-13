@@ -25,11 +25,11 @@
           lazydocker
           lazygit
           neovim
+          pay-respects # Alternative to thefuck which is no longer maintained
           pre-commit
           rclone
           ripgrep
           terraform
-          thefuck
           tlrc
           tree
           tmux
