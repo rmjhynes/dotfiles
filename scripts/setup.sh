@@ -36,6 +36,10 @@ elif [ -f /etc/os-release ]; then
   elif [ "$OS_ID" = 'fedora' ]; then
     export ZSH="$HOME/.oh-my-zsh"
 
+    # Ensure that the necessary Nix environment variables are set
+    # (this is prompted after installing the Nix package manager)
+    . $HOME/.nix-profile/etc/profile.d/nix.sh
+
     # Install packages with Nix package manager
     nix-env -iA nixpkgs.myPackages
   fi
