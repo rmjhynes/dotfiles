@@ -219,11 +219,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-if [ $(uname) = 'Darwin' ]; then
-  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-else
-  [[ ! -f $NIX_HOME_DIRECTORY/.p10k.zsh ]] || source $NIX_HOME_DIRECTORY/.p10k.zsh
-fi
+# if [ $(uname) = 'Darwin' ]; then
+#   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# else
+#   [[ ! -f $NIX_HOME_DIRECTORY/.p10k.zsh ]] || source $NIX_HOME_DIRECTORY/.p10k.zsh
+# fi
+#
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -235,8 +238,9 @@ eval "$(zoxide init zsh)"
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
 # Source aliases from ~/.aliases
-if [ $(uname) = 'Darwin' ]; then
-  source ~/.aliases
-else
-  source $NIX_HOME_DIRECTORY/.aliases
-fi
+# if [ $(uname) = 'Darwin' ]; then
+#   source ~/.aliases
+# else
+#   source $NIX_HOME_DIRECTORY/.aliases
+# fi
+source ~/.aliases
