@@ -6,7 +6,7 @@
         paths = [
           argocd
           bat
-          bind
+          dig
           fastfetch
           figlet
           fzf
@@ -16,6 +16,7 @@
           htop
           jq
           k9s
+          kubernetes-helm
           kubeseal
           lazydocker
           lazygit
@@ -30,6 +31,7 @@
           tmux
           vim
           zoxide
+          zsh
         ];
       };
     };
