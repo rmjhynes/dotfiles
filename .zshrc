@@ -219,32 +219,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-
-# If using MacOS
 if [ $(uname) = 'Darwin' ]; then
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-  source ~/.aliases
-
-# If using Linux (check /etc/os-release)
-elif [ -f /etc/os-release ]; then
-  # Find operating system ID value from /etc/os-release
-  OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
-
-  # If using NixOS
-  if [ "$OS_ID" = 'nixos' ]; then
-    [[ ! -f $NIX_HOME_DIRECTORY/.p10k.zsh ]] || source $NIX_HOME_DIRECTORY/.p10k.zsh
-    source $NIX_HOME_DIRECTORY/.aliases
-
-  # If using other Linux distro
-  else
-    [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-    source ~/.aliases
-  fi
-
-# If not macOS or Linux with an expected OS
 else
-  echo "Unsupported / unknown operating system - unable to source .p10k.zshrc file" >&2
-  exit 1
+  [[ ! -f $NIX_HOME_DIRECTORY/.p10k.zsh ]] || source $NIX_HOME_DIRECTORY/.p10k.zsh
 fi
 
 # Set up fzf key bindings and fuzzy completion
@@ -255,3 +233,10 @@ eval "$(zoxide init zsh)"
 
 # Dracula theme for fzf
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
+# Source aliases from ~/.aliases
+if [ $(uname) = 'Darwin' ]; then
+  source ~/.aliases
+else
+  source $NIX_HOME_DIRECTORY/.aliases
+fi
