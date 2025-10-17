@@ -32,14 +32,9 @@ elif [ -f /etc/os-release ]; then
   if [ "$OS_ID" = 'nixos' ]; then
     export ZSH="${NIX_HOME_DIRECTORY:-$HOME}/.oh-my-zsh"
 
-  # If using Fedora
-  elif [ "$OS_ID" = 'fedora' ]; then
+  # Install packages with Nix package manager
+  else
     export ZSH="$HOME/.oh-my-zsh"
-
-    # Ensure that the necessary Nix environment variables are set
-    # to install packages with Nix
-    # (user is prompted to do this after installing the Nix package manager)
-    . $HOME/.nix-profile/etc/profile.d/nix.sh
 
     # Install packages with Nix package manager
     nix-env -iA nixpkgs.myPackages
