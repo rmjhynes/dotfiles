@@ -13,7 +13,6 @@
           dig
           fastfetch
           figlet
-          fzf
           gh
           git
           golangci-lint
@@ -35,8 +34,6 @@
           tree
           tmux
           vim
-          zoxide
-          zsh
         ];
       };
     };
