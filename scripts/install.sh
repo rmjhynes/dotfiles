@@ -39,15 +39,9 @@ zsh ./scripts/nvim_symlinks.sh
 echo "Symlinks created."
 
 # Install zsh-autosuggestions plugin if not already installed
-if [[ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]]; then
+if [[ ! -d ~/.zsh/zsh-autosuggestions ]]; then
   echo "Installing zsh-autosuggestions..."
-  git clone https://rmjhynes@github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-fi
-
-# Install zsh-syntax-highlighting plugin if not already installed
-if [[ ! -d $ZSH_CUSTOM/plugins/zsh-syntax-highlighting ]]; then
-  echo "Installing zsh-syntax-highlighting..."
-  git clone https://rmjhynes@github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+  git clone https://rmjhynes@github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 fi
 
 # Configure Dracula theme for vim if not already installed
