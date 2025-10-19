@@ -10,8 +10,7 @@ rm -rf ~/.zshrc \
   ~/.config/htop/htoprc \
   ~/.config/nvim \
   ~/.config/gh/config.yml \
-  ~/.config/starship.toml \
-  ~/.config/nixpkgs/config.nix
+  ~/.config/starship.toml
 
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
@@ -42,9 +41,6 @@ mkdir -p ~/.config/htop && ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
 
 # Create directory if it doesn't exist, then symlink gh config file
 mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/gh-config.yml ~/.config/gh/config.yml
-
-# Create directory if it doesn't exist, then symlink nix packages file
-mkdir -p ~/.config/nixpkgs && ln -sfv ~/dotfiles/config.nix ~/.config/nixpkgs/config.nix
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh ./scripts/nvim_symlinks.sh
