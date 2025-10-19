@@ -1,13 +1,16 @@
 #!/bin/zsh
 
 # Remove files in home directory so they can be be replaced with symlinks
-rm -rf ~/.zshrc ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml ~/.config/starship.toml
+rm -rf ~/.zshrc ~/.bashrc ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml ~/.config/starship.toml
 
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
 
 # Symlink .zshrc file
 ln -sfv ~/dotfiles/.zshrc ~/.zshrc
+
+# Symlink .bashrc file
+ln -sfv ~/dotfiles/.bashrc ~/.bashrc
 
 # Symlink .aliases
 ln -sfv ~/dotfiles/.aliases ~/.aliases
