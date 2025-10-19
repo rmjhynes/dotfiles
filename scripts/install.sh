@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Remove files in home directory so they can be be replaced with symlinks
-rm -rf ~/.zshrc ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml
+rm -rf ~/.zshrc ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml ~/.config/starship.toml
 
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
@@ -26,6 +26,9 @@ mkdir -p ~/.config/htop && ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
 
 # Create directory if it doesn't exist, then symlink gh config file
 mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/gh-config.yml ~/.config/gh/config.yml
+
+# Create directory if it doesn't exist, then symlink starship config file
+mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/starship.toml ~/.config/starship.toml
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh ./scripts/nvim_symlinks.sh
