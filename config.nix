@@ -29,6 +29,7 @@
           pre-commit
           rclone
           ripgrep
+          starship
           terraform
           tlrc
           tree
