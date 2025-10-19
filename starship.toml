@@ -1,0 +1,76 @@
+palette = "dracula"
+
+format = """
+$os\
+$username on \
+$hostname\
+$localip in \
+$directory\
+$git_branch\
+$git_status\
+\n$character"""
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[aws]
+style = 'bold orange'
+force_display = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = '[➜](bold red) '
+
+[cmd_duration]
+format = '\[[⏱ $duration]($style)\]'
+style = "bold yellow"
+
+[directory]
+style = "bold green"
+
+[hostname]
+format = '[$hostname]($style)'
+ssh_only = false
+style = "bold purple"
+
+[git_branch]
+style = "bold pink"
+
+[localip]
+disabled = false
+format = '@[$localipv4]($style)'
+ssh_only = false
+
+[os]
+disabled = false
+format = '$symbol($style)'
+
+[package]
+disabled = true
+
+[time]
+disabled = false
+format = '🕙[$time]($style)'
+time_format = '%T'
+time_range = '10:00:00-14:00:00'
+
+[username]
+disabled = false
+format = '$user($style)'
+show_always = true
+style_user = "bold cyan"
+
+# Define Dracula color palette
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
