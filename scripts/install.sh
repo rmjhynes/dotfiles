@@ -1,7 +1,17 @@
 #!/bin/zsh
 
 # Remove files in home directory so they can be be replaced with symlinks
-rm -rf ~/.zshrc ~/.bashrc ~/.aliases ~/.vimrc ~/.tmux.conf ~/.config/ghostty/config ~/.config/htop/htoprc ~/.config/nvim ~/.config/gh/config.yml ~/.config/starship.toml
+rm -rf ~/.zshrc \
+  ~/.bashrc \
+  ~/.aliases \
+  ~/.vimrc \
+  ~/.tmux.conf \
+  ~/.config/ghostty/config \
+  ~/.config/htop/htoprc \
+  ~/.config/nvim \
+  ~/.config/gh/config.yml \
+  ~/.config/starship.toml \
+  ~/.config/nixpkgs/config.nix
 
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to ~/dotfiles..."
@@ -20,6 +30,9 @@ ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 
 # Symlink .tmux.conf
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+# Symlink config.nix
+ln -sfv ~/dotfiles/config.nix ~/config/nixpkgs/config.nix
 
 # Create directory if it doesn't exist, then symlink ghostty config file
 mkdir -p ~/.config/ghostty && ln -sfv ~/dotfiles/ghostty.conf ~/.config/ghostty/config
