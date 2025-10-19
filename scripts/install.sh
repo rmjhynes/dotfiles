@@ -31,8 +31,8 @@ ln -sfv ~/dotfiles/.vimrc ~/.vimrc
 # Symlink .tmux.conf
 ln -sfv ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-# Symlink config.nix
-ln -sfv ~/dotfiles/config.nix ~/config/nixpkgs/config.nix
+# Symlink starship.toml
+ln -sfv ~/dotfiles/starship.toml ~/.config/starship.toml
 
 # Create directory if it doesn't exist, then symlink ghostty config file
 mkdir -p ~/.config/ghostty && ln -sfv ~/dotfiles/ghostty.conf ~/.config/ghostty/config
@@ -43,8 +43,8 @@ mkdir -p ~/.config/htop && ln -sfv ~/dotfiles/htoprc ~/.config/htop/htoprc
 # Create directory if it doesn't exist, then symlink gh config file
 mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/gh-config.yml ~/.config/gh/config.yml
 
-# Create directory if it doesn't exist, then symlink starship config file
-mkdir -p ~/.config/gh && ln -sfv ~/dotfiles/starship.toml ~/.config/starship.toml
+# Create directory if it doesn't exist, then symlink nix packages file
+mkdir -p ~/.config/nixpkgs && ln -sfv ~/dotfiles/config.nix ~/.config/nixpkgs/config.nix
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh ./scripts/nvim_symlinks.sh
