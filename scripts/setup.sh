@@ -2,7 +2,6 @@
 
 # If using MacOS
 if [ $(uname) = 'Darwin' ]; then
-  export ZSH="$HOME/.oh-my-zsh"
 
   # If not already installed, install Homebrew
   if ! command -v brew &>/dev/null; then
@@ -28,17 +27,8 @@ elif [ -f /etc/os-release ]; then
   # Find operating system ID value from /etc/os-release
   OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
 
-  # If using NixOS
-  if [ "$OS_ID" = 'nixos' ]; then
-    export ZSH="${NIX_HOME_DIRECTORY:-$HOME}/.oh-my-zsh"
-
   # Install packages with Nix package manager
-  else
-    export ZSH="$HOME/.oh-my-zsh"
-
-    # Install packages with Nix package manager
-    nix-env -iA nixpkgs.myPackages
-  fi
+  nix-env -iA nixpkgs.myPackages
 
 # If not macOS or Linux with an expected OS
 else
