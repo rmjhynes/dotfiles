@@ -14,7 +14,6 @@
           fastfetch
           figlet
           gh
-          git
           golangci-lint
           htop
           jq
