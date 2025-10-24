@@ -8,12 +8,15 @@
       myPackages = pkgs.buildEnv {
         name = "rmjhynes-packages";
         paths = [
+          act
           argocd
           bat
           dig
           fastfetch
           figlet
+          # fzf - installed explicitly with Ansible
           gh
+          # git - installed explicitly with Ansible
           golangci-lint
           htop
           jq
@@ -22,6 +25,7 @@
           kubeseal
           lazydocker
           lazygit
+          librewolf
           neovim
           pay-respects # Alternative to thefuck which is no longer maintained
           pre-commit
@@ -33,6 +37,9 @@
           tree
           tmux
           vim
+          yq-go
+          # zoxide - installed explicitly with Ansible
+          # zsh - installed explicitly with Ansible
         ];
       };
     };
