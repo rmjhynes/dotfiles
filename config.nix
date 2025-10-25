@@ -16,6 +16,7 @@
           figlet
           # fzf - installed explicitly with Ansible
           gh
+          ghostty
           # git - installed explicitly with Ansible
           golangci-lint
           htop
@@ -26,6 +27,8 @@
           lazydocker
           lazygit
           librewolf
+          localsend
+          mullvad-vpn
           neovim
           pay-respects # Alternative to thefuck which is no longer maintained
           pre-commit
