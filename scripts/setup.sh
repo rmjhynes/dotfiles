@@ -33,9 +33,6 @@ elif [ -f /etc/os-release ]; then
   # Install packages with Nix package manager
   nix-env -iA nixpkgs.myPackages
 
-  # Install DevPod CLI
-  curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-amd64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
-
 # If not macOS or Linux with an expected OS
 else
   echo "Unsupported / unknown operating system." >&2
