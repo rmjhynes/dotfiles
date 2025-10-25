@@ -22,13 +22,19 @@ if [ $(uname) = 'Darwin' ]; then
   # Install LibreWolf without quarantine otherwise you get 'LibreWolf is damaged and can't be opened...' error.
   brew reinstall librewolf --cask --no-quarantine
 
+  # Install DevPod CLI
+  curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-darwin-arm64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
+
 # If using Linux (check /etc/os-release)
 elif [ -f /etc/os-release ]; then
   # Find operating system ID value from /etc/os-release
-  OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
+  #OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
 
   # Install packages with Nix package manager
   nix-env -iA nixpkgs.myPackages
+
+  # Install DevPod CLI
+  curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-linux-amd64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
 
 # If not macOS or Linux with an expected OS
 else
