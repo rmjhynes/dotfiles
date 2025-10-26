@@ -17,6 +17,7 @@
           # fzf - installed explicitly with Ansible
           gh
           ghostty
+          gnupg
           # git - installed explicitly with Ansible
           golangci-lint
           htop
@@ -31,6 +32,7 @@
           mullvad-vpn
           neovim
           pay-respects # Alternative to thefuck which is no longer maintained
+          pinentry-tty
           pre-commit
           rclone
           ripgrep
