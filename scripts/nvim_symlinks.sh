@@ -1,10 +1,10 @@
 #!/bin/zsh
 
-# Recursively create symlinks for all files and directories in ~/dotfiles/nvim to point to $HOME directory
+# Recursively create symlinks for all files and directories in $HOME/dotfiles/nvim to point to $HOME directory
 
 # Configuration
 DOTFILES_NVIM_DIR="$HOME/dotfiles/nvim"
-NVIM_CONFIG_DIR="$HOME/.config/nvim"
+NVIM_CONFIG_DIR="$XDG_CONFIG_HOME/nvim"
 
 # Create fresh nvim config directory
 mkdir -p "$NVIM_CONFIG_DIR"
