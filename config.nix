@@ -33,6 +33,7 @@
           neovim
           pay-respects # Alternative to thefuck which is no longer maintained
           pinentry-tty
+          podman
           pre-commit
           rclone
           ripgrep
