@@ -22,6 +22,7 @@
           golangci-lint
           htop
           jq
+          k3d
           k9s
           kubernetes-helm
           kubeseal
@@ -31,8 +32,8 @@
           localsend
           mullvad-vpn
           neovim
-          pay-respects # Alternative to thefuck which is no longer maintained
           pinentry-tty
+          podman
           pre-commit
           rclone
           ripgrep
