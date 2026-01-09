@@ -25,6 +25,7 @@
           k3d
           k9s
           kubernetes-helm
+          kubectl
           kubeseal
           lazydocker
           lazygit
