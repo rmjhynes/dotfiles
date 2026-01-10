@@ -33,7 +33,9 @@ elif [ -f /etc/os-release ]; then
   # Find operating system ID value from /etc/os-release
   #OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
 
-  # Install packages with Nix package manager
+  # Create required Nix directory and install packages with Nix package manager
+  mkdir -p $XDG_CONFIG_HOME/nixpkgs
+  ln -sfv $HOME/dotfiles/config.nix $XDG_CONFIG_HOME/nixpkgs/config.nix
   nix-env -iA nixpkgs.myPackages
 
 # If not macOS or Linux with an expected OS
