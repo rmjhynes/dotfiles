@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Get the directory where this script is located
+SCRIPT_DIR="${0:a:h}"
+
 # Remove files in home directory so they can be be replaced with symlinks
 rm -rf $HOME/.zshrc \
   $HOME/.bashrc \
@@ -43,7 +46,7 @@ mkdir -p $XDG_CONFIG_HOME/htop && ln -sfv $HOME/dotfiles/htoprc $XDG_CONFIG_HOME
 mkdir -p $XDG_CONFIG_HOME/gh && ln -sfv $HOME/dotfiles/gh-config.yml $XDG_CONFIG_HOME/gh/config.yml
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
-zsh ./scripts/nvim_symlinks.sh
+zsh "$SCRIPT_DIR/nvim_symlinks.sh"
 
 echo "Symlinks created."
 
