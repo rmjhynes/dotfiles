@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Set XDG_CONFIG_HOME to ~/.config if it's not already set
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
@@ -45,4 +48,4 @@ else
 fi
 
 # Install dotfiles with zsh in script install.sh
-zsh ./scripts/install.sh
+zsh "$SCRIPT_DIR/install.sh"
