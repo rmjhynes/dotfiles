@@ -15,7 +15,7 @@ rm -rf $HOME/.zshrc \
 # Create symlinks for files in home directory to point to cloned dotfiles directory
 echo "Creating symlinks for files in the home directory to point to $HOME/dotfiles..."
 
-# Symlink .zshrc fileln -sfv ~/dotfiles/.zshrc ~/.zshrc
+# Symlink .zshrc file
 ln -sfv $HOME/dotfiles/.zshrc $HOME/.zshrc
 
 # Symlink .bashrc file
