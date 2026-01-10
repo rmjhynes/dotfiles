@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set XDG_CONFIG_HOME to ~/.config if it's not already set
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
 # If using MacOS
 if [ $(uname) = 'Darwin' ]; then
 

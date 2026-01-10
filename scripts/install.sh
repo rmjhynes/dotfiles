@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# Set XDG_CONFIG_HOME to ~/.config if it's not already set
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-
 # Remove files in home directory so they can be be replaced with symlinks
 rm -rf $HOME/.zshrc \
   $HOME/.bashrc \
