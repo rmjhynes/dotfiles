@@ -14,11 +14,11 @@
           dig
           fastfetch
           figlet
-          # fzf - installed explicitly with Ansible
+          fzf
           gh
-          ghostty
+          #ghostty
           gnupg
-          # git - installed explicitly with Ansible
+          git
           golangci-lint
           htop
           jq
@@ -29,9 +29,9 @@
           kubeseal
           lazydocker
           lazygit
-          librewolf
-          localsend
-          mullvad-vpn
+          #librewolf
+          #localsend
+          #mullvad-vpn
           neovim
           pinentry-tty
           podman
@@ -45,8 +45,8 @@
           tmux
           vim
           yq-go
-          # zoxide - installed explicitly with Ansible
-          # zsh - installed explicitly with Ansible
+          zoxide
+          zsh
         ];
       };
     };
