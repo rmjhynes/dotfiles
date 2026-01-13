@@ -10,3 +10,6 @@ source ~/.aliases
 
 # needed for gpg to work
 export GPG_TTY=$(tty)
+
+# k3s
+export KUBECONFIG=~/.kube/config
