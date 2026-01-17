@@ -31,20 +31,8 @@ if [ $(uname) = 'Darwin' ]; then
   # Install DevPod CLI
   curl -L -o devpod "https://github.com/loft-sh/devpod/releases/latest/download/devpod-darwin-arm64" && sudo install -c -m 0755 devpod /usr/local/bin && rm -f devpod
 
-# If using Linux (check /etc/os-release)
-elif [ -f /etc/os-release ]; then
-  # Find operating system ID value from /etc/os-release
-  #OS_ID="$(awk -F '=' '/^ID=/ {print $2}' /etc/os-release | tr -d '"')"
-
-  # Create required Nix directory and install packages with Nix package manager
-  mkdir -p $XDG_CONFIG_HOME/nixpkgs
-  ln -sfv $HOME/dotfiles/config.nix $XDG_CONFIG_HOME/nixpkgs/config.nix
-  nix-env -iA nixpkgs.myPackages
-
-# If not macOS or Linux with an expected OS
 else
-  echo "Unsupported / unknown operating system." >&2
-  exit 1
+  echo "This is not a MacOS machine - packages should be installed via Ansible..."
 fi
 
 # Install dotfiles with zsh in script install.sh
