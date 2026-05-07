@@ -26,7 +26,7 @@ ln -sfv $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sfv $HOME/dotfiles/.bashrc $HOME/.bashrc
 
 # Symlink .aliases
-ln -sfv $HOME/dotfiles/.aliases $HOME/.alias
+ln -sfv $HOME/dotfiles/.aliases $HOME/.aliases
 
 # Symlink .vimrc
 ln -sfv $HOME/dotfiles/.vimrc $HOME/.vimrc
