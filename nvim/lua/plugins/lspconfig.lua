@@ -34,11 +34,14 @@ return {
       -- so cmp can request them. Without this, LSP completion is degraded.
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      local lspconfig = require("lspconfig")
+      -- Neovim 0.11+ API: register per-server settings, then enable them.
+      -- nvim-lspconfig still ships the defaults (cmd, filetypes, root_dir);
+      -- vim.lsp.config() merges our overrides on top.
       for name, opts in pairs(servers) do
         opts.capabilities = capabilities
-        lspconfig[name].setup(opts)
+        vim.lsp.config(name, opts)
       end
+      vim.lsp.enable(vim.tbl_keys(servers))
 
       -- How diagnostics (errors/warnings) are rendered in the buffer
       vim.diagnostic.config({
