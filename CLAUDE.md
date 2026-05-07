@@ -1,0 +1,1 @@
+- Do not remove comments that exist in code unless the code is being removed or updated, and therefore the comment is no longer accurate.
