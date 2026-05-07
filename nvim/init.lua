@@ -130,9 +130,5 @@ vim.opt.colorcolumn = "80"
 -- Needed for buffeline.nvim plugin to work
 vim.opt.termguicolors = true
 
--- Needed to bypass error relating to incorrect order of `lazy.nvim` imports on startup
--- I am not using LazyVim plugins so its fine to use this option
-vim.g.lazyvim_check_order = false
-
 -- Read /lua/config/lazy.lua file to initialise lazy.nvim
 require("config.lazy")
