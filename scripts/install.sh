@@ -9,6 +9,7 @@ rm -rf $HOME/.zshrc \
   $HOME/.aliases \
   $HOME/.vimrc \
   $HOME/.tmux.conf \
+  $HOME/.claude/CLAUDE.md \
   $XDG_CONFIG_HOME/ghostty/config \
   $XDG_CONFIG_HOME/htop/htoprc \
   $XDG_CONFIG_HOME/nvim \
@@ -25,7 +26,7 @@ ln -sfv $HOME/dotfiles/.zshrc $HOME/.zshrc
 ln -sfv $HOME/dotfiles/.bashrc $HOME/.bashrc
 
 # Symlink .aliases
-ln -sfv $HOME/dotfiles/.aliases $HOME/.aliases
+ln -sfv $HOME/dotfiles/.aliases $HOME/.alias
 
 # Symlink .vimrc
 ln -sfv $HOME/dotfiles/.vimrc $HOME/.vimrc
@@ -44,6 +45,9 @@ mkdir -p $XDG_CONFIG_HOME/htop && ln -sfv $HOME/dotfiles/htoprc $XDG_CONFIG_HOME
 
 # Create directory if it doesn't exist, then symlink gh config file
 mkdir -p $XDG_CONFIG_HOME/gh && ln -sfv $HOME/dotfiles/gh-config.yml $XDG_CONFIG_HOME/gh/config.yml
+
+# Create directory if it doesn't exist, then symlink global CLAUDE.md file
+mkdir -p $HOME/.claude && ln -sfv $HOME/dotfiles/CLAUDE.md $HOME/.claude/CLAUDE.md
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh "$SCRIPT_DIR/nvim_symlinks.sh"
