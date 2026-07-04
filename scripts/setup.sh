@@ -19,7 +19,6 @@ if [ $(uname) = 'Darwin' ]; then
   if [[ -f $HOME/dotfiles/Brewfile ]]; then
     echo "Installing packages from Brewfile..."
     brew bundle --file=$HOME/dotfiles/Brewfile
-    brew upgrade
   else
     echo "Brewfile not found in ~/dotfiles."
     exit 1
