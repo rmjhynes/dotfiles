@@ -9,7 +9,6 @@ brew "git"
 brew "golangci-lint"
 brew "hashicorp/tap/terraform"
 brew "htop"
-brew "jesseduffield/lazydocker/lazydocker"
 brew "jesseduffield/lazygit/lazygit"
 brew "jq"
 brew "k3d"
@@ -34,5 +33,9 @@ cask "localsend"
 cask "obsidian"
 cask "orbstack"
 cask "raycast"
-tap "hashicorp/tap"
-tap "jesseduffield/lazygit"
+tap "hashicorp/tap", trusted: {
+  formula: "terraform"
+}
+tap "jesseduffield/lazygit", trusted: {
+  formula: "lazygit"
+}
