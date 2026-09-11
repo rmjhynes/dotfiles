@@ -47,7 +47,7 @@ mkdir -p $XDG_CONFIG_HOME/htop && ln -sfv $HOME/dotfiles/htoprc $XDG_CONFIG_HOME
 mkdir -p $XDG_CONFIG_HOME/gh && ln -sfv $HOME/dotfiles/gh-config.yml $XDG_CONFIG_HOME/gh/config.yml
 
 # Create directory if it doesn't exist, then symlink global CLAUDE.md file
-mkdir -p $HOME/.claude && ln -sfv $HOME/dotfiles/CLAUDE.md $HOME/.claude/CLAUDE.md
+mkdir -p $HOME/.claude && ln -sfv $HOME/dotfiles/AGENTS.md $HOME/.claude/CLAUDE.md
 
 # Create symlinks for all files in nvim directory in script nvim_symlinks.sh
 zsh "$SCRIPT_DIR/nvim_symlinks.sh"
