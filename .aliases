@@ -25,3 +25,19 @@ alias fzfnv='nvim $(fzf --preview="bat {} --style=numbers --color=always")'
 # May show error when installed via Nix packages as its no longer maintained
 # pay-respects package can be used instead
 # eval $(thefuck --alias fck)
+
+# tmux alias to create a new session for the current working directory with
+# a main window and a window running lazygit to stage code changes
+tmuxh() {
+  local s; s="$(basename "$PWD")"
+  if ! command tmux has-session -t "=$s" 2>/dev/null; then
+    command tmux new -d -s "$s" -n main
+    command tmux new-window -t "=$s:" -n lazygit lazygit
+    command tmux select-window -t "=$s:main"
+  fi
+  if [[ -n "$TMUX" ]]; then
+    command tmux switch-client -t "=$s"
+  else
+    command tmux attach -t "=$s"
+  fi
+}
