@@ -27,11 +27,15 @@ brew "yt-dlp"
 brew "zoxide"
 brew "zsh-syntax-highlighting"
 cask "aldente"
+cask "docker/tap/sbx"
 cask "ghostty"
 cask "localsend"
 cask "obsidian"
 cask "orbstack"
 cask "raycast"
+tap "docker/tap", trusted: {
+  cask: "sbx"
+}
 tap "hashicorp/tap", trusted: {
   formula: "terraform"
 }
